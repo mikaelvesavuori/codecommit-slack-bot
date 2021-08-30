@@ -1,0 +1,34 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Repository State Change",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-29T12:33:02Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "referenceFullName": "refs/heads/main",
+              "referenceType": "branch",
+              "commitId": "06008c418a41f307f7e0c70a6982bc755bca7276",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "repositoryName": "mydemorepo",
+              "oldCommitId": "6f7e053b34a6e4f66efdf5ec946bb4eae9ef299b",
+              "destinationCommitId": "6f7e053b34a6e4f66efdf5ec946bb4eae9ef299b",
+              "repositoryId": "77d2770e-9e6a-4370-8759-72f8f6fc2b86",
+              "sourceCommitId": "06008c418a41f307f7e0c70a6982bc755bca7276",
+              "event": "referenceUpdated",
+              "mergeOption": "FAST_FORWARD_MERGE",
+              "referenceName": "main"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

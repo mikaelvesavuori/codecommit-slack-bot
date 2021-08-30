@@ -1,0 +1,39 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Pull Request State Change",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-29T12:53:12Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "sourceReference": "refs/heads/feature/demo",
+              "lastModifiedDate": "Sun Aug 29 12:53:09 UTC 2021",
+              "author": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "isMerged": "False",
+              "pullRequestStatus": "Open",
+              "notificationBody": "A pull request event occurred in the following AWS CodeCommit repository: mydemorepo. User: arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net. Event: Created. Pull request name: 33. Additional information: A pull request was created with the following ID: 33. The title of the pull request is: Demo PR 1. For more information, go to the AWS CodeCommit console https://eu-north-1.console.aws.amazon.com/codesuite/codecommit/repositories/mydemorepo/pull-requests/33?region=eu-north-1.",
+              "description": "My PR text here.",
+              "destinationReference": "refs/heads/main",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "creationDate": "Sun Aug 29 12:53:09 UTC 2021",
+              "pullRequestId": "33",
+              "title": "Demo PR 1",
+              "revisionId": "b68f3cd0ddc0a7ef8b338e7f99b3a3be8b39b16fbf58b1a39057d0bdcf178f60",
+              "repositoryNames": ["mydemorepo"],
+              "destinationCommit": "06008c418a41f307f7e0c70a6982bc755bca7276",
+              "event": "pullRequestCreated",
+              "sourceCommit": "066e3d83942e43ac15a3460c7de511fc425f2eba"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

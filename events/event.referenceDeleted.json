@@ -1,0 +1,30 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Repository State Change",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-29T13:10:28Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "referenceFullName": "refs/heads/feature/demo",
+              "repositoryId": "77d2770e-9e6a-4370-8759-72f8f6fc2b86",
+              "referenceType": "branch",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "event": "referenceDeleted",
+              "repositoryName": "mydemorepo",
+              "oldCommitId": "066e3d83942e43ac15a3460c7de511fc425f2eba",
+              "referenceName": "feature/demo"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

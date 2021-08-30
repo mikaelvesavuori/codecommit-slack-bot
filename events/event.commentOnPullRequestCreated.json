@@ -1,0 +1,31 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Comment on Pull Request",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-29T13:03:51Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "beforeCommitId": "06008c418a41f307f7e0c70a6982bc755bca7276",
+              "notificationBody": "A pull request event occurred in the following AWS CodeCommit repository: mydemorepo. The user: arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net made a comment or replied to a comment. The comment was made on the following Pull Request: 33. For more information, go to the AWS CodeCommit console https://eu-north-1.console.aws.amazon.com/codesuite/codecommit/repositories/mydemorepo/pull-requests/33/activity#62efd438-8f26-406e-95f7-42c70318ca5f%3A368f1a07-e0bb-40f4-a4fc-aab22e9e1070?region=eu-north-1",
+              "repositoryId": "77d2770e-9e6a-4370-8759-72f8f6fc2b86",
+              "commentId": "62efd438-8f26-406e-95f7-42c70318ca5f:368f1a07-e0bb-40f4-a4fc-aab22e9e1070",
+              "afterCommitId": "066e3d83942e43ac15a3460c7de511fc425f2eba",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "event": "commentOnPullRequestCreated",
+              "pullRequestId": "33",
+              "repositoryName": "mydemorepo"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

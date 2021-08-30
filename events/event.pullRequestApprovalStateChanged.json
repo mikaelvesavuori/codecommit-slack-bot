@@ -1,0 +1,40 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Pull Request State Change",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-30T11:35:19Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "approvalStatus": "APPROVE",
+              "sourceReference": "refs/heads/feature/something",
+              "lastModifiedDate": "Mon Aug 30 11:32:16 UTC 2021",
+              "author": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "isMerged": "False",
+              "pullRequestStatus": "Open",
+              "notificationBody": "A pull request event occurred in the following AWS CodeCommit repository: mydemorepo. User: arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someotheruser@domain.net. Event: Updated. Pull request name: 35. Additional information: A user has changed their approval state for the pull request. State change: APPROVE. For more information, go to the AWS CodeCommit console https://eu-north-1.console.aws.amazon.com/codesuite/codecommit/repositories/mydemorepo/pull-requests/35?region=eu-north-1.",
+              "description": "my pr desc",
+              "destinationReference": "refs/heads/main",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someotheruser@domain.net",
+              "creationDate": "Mon Aug 30 11:32:16 UTC 2021",
+              "pullRequestId": "35",
+              "title": "my pr",
+              "revisionId": "47c4a29f9206305405843edba42489c21d3db571f7f3db40ceed8825377c4bd7",
+              "repositoryNames": ["mydemorepo"],
+              "destinationCommit": "7e958ddb882c3540c780789721bc78e66bd17511",
+              "event": "pullRequestApprovalStateChanged",
+              "sourceCommit": "7e958ddb882c3540c780789721bc78e66bd17511"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

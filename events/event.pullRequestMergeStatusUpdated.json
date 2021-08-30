@@ -1,0 +1,40 @@
+{
+  "event": {
+    "Records": [
+      {
+        "Sns": {
+          "Message": {
+            "account": "123456789012",
+            "detailType": "CodeCommit Pull Request State Change",
+            "region": "eu-north-1",
+            "source": "aws.codecommit",
+            "time": "2021-08-29T12:32:58Z",
+            "notificationRuleArn": "arn:aws:codestar-notifications:eu-north-1:123456789012:notificationrule/98172983719bdb91db1171261",
+            "detail": {
+              "sourceReference": "refs/heads/feature/demo",
+              "lastModifiedDate": "Sun Aug 29 12:32:52 UTC 2021",
+              "author": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "isMerged": "True",
+              "pullRequestStatus": "Closed",
+              "notificationBody": "A pull request event occurred in the following AWS CodeCommit repository: mydemorepo. User: arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net. Event: Updated. Pull request name: 32. Additional information: The pull request merge status has been updated. The status is merged. For more information, go to the AWS CodeCommit console https://eu-north-1.console.aws.amazon.com/codesuite/codecommit/repositories/mydemorepo/pull-requests/32?region=eu-north-1.",
+              "description": "My PR message",
+              "destinationReference": "refs/heads/main",
+              "callerUserArn": "arn:aws:sts::123456789012:assumed-role/AWSReservedSSO_Something_asdf1234/someuser@domain.net",
+              "creationDate": "Sun Aug 29 12:05:05 UTC 2021",
+              "pullRequestId": "32",
+              "title": "My PR",
+              "revisionId": "97c37883272f14747cbaf876dc27465e705f743b7413cd25ecc24d8dca5bd7e0",
+              "repositoryNames": ["mydemorepo"],
+              "destinationCommit": "6f7e053b34a6e4f66efdf5ec946bb4eae9ef299b",
+              "event": "pullRequestMergeStatusUpdated",
+              "mergeOption": "FAST_FORWARD_MERGE",
+              "sourceCommit": "06008c418a41f307f7e0c70a6982bc755bca7276"
+            },
+            "resources": ["arn:aws:codecommit:eu-north-1:123456789012:mydemorepo"],
+            "additionalAttributes": {}
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "codecommit-slack-bot",
+  "version": "1.0.0",
+  "description": "Simple serverless Slack bot for notifying about AWS CodeCommit events",
+  "main": "src/index.js",
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "codecommit",
+    "slack",
+    "serverless",
+    "slack-bot",
+    "ci-cd",
+    "notifications"
+  ],
+  "scripts": {
+    "start": "npx sls offline",
+    "deploy": "npx sls deploy",
+    "remove": "npx sls remove",
+    "event:comment:commit": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.commentOnCommitCreated.json http://localhost:3000/shared/slackbot",
+    "event:comment:pr": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.commentOnPullRequestCreated.json http://localhost:3000/shared/slackbot",
+    "event:pr:approval:overridden": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestApprovalRuleOverridden.json http://localhost:3000/shared/slackbot",
+    "event:pr:approval:changed": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestApprovalStateChanged.json http://localhost:3000/shared/slackbot",
+    "event:pr:created": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestCreated.json http://localhost:3000/shared/slackbot",
+    "event:pr:merge:updated": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestMergeStatusUpdated.json http://localhost:3000/shared/slackbot",
+    "event:pr:source:updated": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestSourceBranchUpdated.json http://localhost:3000/shared/slackbot",
+    "event:pr:changed": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.pullRequestStatusChanged.json http://localhost:3000/shared/slackbot",
+    "event:ref:updated:merge": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.mergeReferenceUpdated.json http://localhost:3000/shared/slackbot",
+    "event:ref:updated": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.referenceUpdated.json http://localhost:3000/shared/slackbot",
+    "event:ref:deleted": "curl -X POST -H 'Content-Type: application/json' -d @./events/event.referenceDeleted.json http://localhost:3000/shared/slackbot"
+  },
+  "devDependencies": {
+    "@babel/core": "7",
+    "babel-loader": "8",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "prettier": "2",
+    "serverless": "2",
+    "serverless-offline": "8",
+    "serverless-webpack": "5",
+    "webpack": "5"
+  }
+}

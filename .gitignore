@@ -1,0 +1,9 @@
+*.lock
+.env
+.env.*
+dist/
+/node_modules/
+/.vscode/
+/.serverless
+/.webpack
+/build/

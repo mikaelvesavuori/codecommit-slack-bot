@@ -1,0 +1,44 @@
+service: codecommit-slack-bot
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'shared'}
+  region: eu-north-1
+  memorySize: 512
+  timeout: 10
+  logRetentionInDays: 7
+  versionFunctions: false
+  lambdaHashingVersion: 20201221
+  deploymentBucket:
+    blockPublicAccess: true
+    maxPreviousDeploymentArtifacts: 5
+    serverSideEncryption: AES256
+  stackTags:
+    Usage: ${self:service}
+  tags:
+    Usage: ${self:service}
+  apiGateway:
+    minimumCompressionSize: 1024
+  environment:
+    REGION: ${self:provider.region}
+    SLACK_HOOK_PATH: /services/RANDOM/RANDOM/LONG_RANDOM
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+package:
+  individually: true
+  patterns:
+    - node_modules/aws-sdk/**
+    - node_modules/aws-lambda/**
+
+functions:
+  SlackBot:
+    handler: src/index.handler
+    description: Slack bot
+    events:
+      - http:
+          method: POST
+          path: /slackbot
