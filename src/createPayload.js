@@ -30,7 +30,6 @@ export function createPayload(message) {
 
     /**
      * @description Final processed data, including text, header and URL.
-     * @todo Missing "Approval" x 2
      */
     const processedData = (() => {
       if (detailEvent === 'commentOnCommitCreated') return createCommentOnCommitCreated(eventData);
