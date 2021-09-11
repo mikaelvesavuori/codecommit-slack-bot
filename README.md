@@ -43,7 +43,7 @@ This project uses [Serverless Framework](https://www.serverless.com) to deploy t
 
 ### AWS
 
-- Create a standard SNS topic called `slackbot`. You are welcome to change this if you want, but in that case you'll also need to update the policy. Use the provided policy (`policy.json`) exchanging the bogus account number and region for your values. Note that the policy is fairly wide, but this shouldn't be too much of a security concern... KMS is also disabled. All these aspects are that way because CodeCommit can be really finicky to get going :/
+- Create a standard SNS topic called `slackbot`. You are welcome to change this if you want, but in that case you'll also need to update the policy. Use the provided policy (`policy.json`) exchanging the bogus account number and region for your values. Note that the policy is fairly wide, but this shouldn't be too much of a security concern... KMS is also disabled. All these aspects are set up this way because CodeCommit can be really finicky to get going :/
 - Add a subscription in SNS with the Lambda function as a subscriber to the topic you created.
 - Create a notification rule on your CodeCommit repository. Add any events you are interested in. As the target, set your newly-created SNS topic.
 
